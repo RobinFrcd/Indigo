@@ -1006,8 +1006,8 @@ int loopDist(int i, int j, int len)
 {
     if (i > j)
     {
-        int t;
-        __swap(i, j, t);
+
+        std::swap(i, j);
     }
     int d1 = j - i;
     int d2 = i + len - j;
@@ -3960,8 +3960,8 @@ void MoleculeRenderInternal::_prepareDoubleBondCoords(Vec2f* coord, BondDescr& b
 
         if (!bd.lineOnTheRight)
         {
-            float t;
-            __swap(bd.extP, bd.extN, t);
+
+            std::swap(bd.extP, bd.extN);
             ns.negate();
         }
 
